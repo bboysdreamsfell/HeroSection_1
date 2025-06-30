@@ -1,0 +1,29 @@
+
+/* CSS */
+.btn_1 {
+    --b: 2px;
+    --s: .33em;
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--white) !important;
+    --_p: var(--s);
+    background:conic-gradient(from 90deg at var(--b) var(--b), var(--black) 90deg,var(--white) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid var(--black) !important;
+    outline-offset: .6em;
+    font-weight:500;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.btn_1:hover, .btn_1:focus-visible{
+    --_p: 0px;
+    outline-color: var(--white) !important;
+    outline-offset: .05em !important;
+}
+
+.btn_1:active {
+    background: var(--white);
+    color: var(--black) !important;
+}
